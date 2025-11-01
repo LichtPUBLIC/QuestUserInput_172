@@ -119,5 +119,41 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
         }
 
         Spacer(modifier = Modifier.height(24.dp))
+
+
+        Text(
+            text = "STATUS PERKAWINAN",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = darkTextColor,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+
+        statusPerkawinanOptions.forEach { option ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .selectable(
+                        selected = (statusPerkawinan == option),
+                        onClick = { statusPerkawinan = option }
+                    )
+                    .padding(vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                RadioButton(
+                    selected = (statusPerkawinan == option),
+                    onClick = { statusPerkawinan = option },
+                    colors = RadioButtonDefaults.colors(
+                        selectedColor = PrimaryColor,
+                        unselectedColor = Color.DarkGray.copy(alpha = 0.6f)
+                    )
+                )
+                Text(
+                    text = option,
+                    color = darkTextColor,
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
+        }
     }
 }
