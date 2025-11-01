@@ -16,6 +16,12 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.unit.dp
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.fillMaxWidth
 
 val PrimaryColor = Color(0xFF5C6BC0)
 val darkTextColor = Color.Black
@@ -40,6 +46,21 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start
     ) {
+        Text(
+            text = "NAMA LENGKAP",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = darkTextColor,
+            modifier = Modifier.padding(top = 70.dp, bottom = 8.dp) // Penyesuaian padding awal
+        )
 
+        OutlinedTextField(
+            value = namaLengkap,
+            onValueChange = { namaLengkap = it },
+            placeholder = { Text("Masukan nama lengkap", color = lightPlaceholderColor) },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            shape = MaterialTheme.shapes.small
+        )
     }
 }
