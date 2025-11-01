@@ -61,5 +61,25 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
             color = darkTextColor,
             modifier = Modifier.padding(bottom = 24.dp)
         )
+
+
+        Text(
+            text = "NAMA LENGKAP",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = darkTextColor,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+
+        OutlinedTextField(
+            value = namaLengkap,
+            onValueChange = { namaLengkap = it },
+            placeholder = { Text("Masukan nama lengkap", color = lightPlaceholderColor) },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            shape = MaterialTheme.shapes.small
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
     }
 }
