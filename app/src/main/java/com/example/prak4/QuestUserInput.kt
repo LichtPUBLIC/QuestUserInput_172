@@ -11,6 +11,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
 
 val PrimaryColor = Color(0xFF5C6BC0)
 val darkTextColor = Color.Black
@@ -26,4 +31,15 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
     val jenisKelaminOptions = listOf("Laki-laki", "Perempuan")
     val statusPerkawinanOptions = listOf("Janda", "Duda", "Belum Menikah")
 
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+            .verticalScroll(rememberScrollState())
+            .padding(20.dp),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.Start
+    ) {
+
+    }
 }
