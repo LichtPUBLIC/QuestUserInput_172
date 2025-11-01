@@ -175,5 +175,23 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
             singleLine = true,
             shape = MaterialTheme.shapes.small
         )
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+
+        Button(
+            onClick = {
+
+                println("Nama: $namaLengkap")
+                println("Jenis Kelamin: $jenisKelamin")
+                println("Status: $statusPerkawinan")
+                println("Alamat: $alamat")
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                text = "Submit"
+            )
+        }
     }
 }
