@@ -10,6 +10,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
+
+val PrimaryColor = Color(0xFF5C6BC0)
+val darkTextColor = Color.Black
+val lightPlaceholderColor = Color.Gray
 
 @Composable
 fun QuestUserInput(modifier: Modifier = Modifier) {
