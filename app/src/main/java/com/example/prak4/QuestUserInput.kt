@@ -18,5 +18,7 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
     var statusPerkawinan by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
 
+    val jenisKelaminOptions = listOf("Laki-laki", "Perempuan")
+    val statusPerkawinanOptions = listOf("Janda", "Duda", "Belum Menikah")
 
 }
