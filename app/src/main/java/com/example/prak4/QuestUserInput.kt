@@ -157,5 +157,23 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
         }
 
         Spacer(modifier = Modifier.height(24.dp))
+
+
+        Text(
+            text = "ALAMAT",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold,
+            color = darkTextColor,
+            modifier = Modifier.padding(bottom = 8.dp)
+        )
+
+        OutlinedTextField(
+            value = alamat,
+            onValueChange = { alamat = it },
+            placeholder = { Text("Alamat", color = lightPlaceholderColor) },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            shape = MaterialTheme.shapes.small
+        )
     }
 }
