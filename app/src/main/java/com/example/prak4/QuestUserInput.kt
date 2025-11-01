@@ -155,5 +155,7 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(24.dp))
     }
 }
