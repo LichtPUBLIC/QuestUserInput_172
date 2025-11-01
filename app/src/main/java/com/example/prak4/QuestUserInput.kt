@@ -187,10 +187,17 @@ fun QuestUserInput(modifier: Modifier = Modifier) {
                 println("Status: $statusPerkawinan")
                 println("Alamat: $alamat")
             },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = PrimaryColor
+            ),
+            shape = MaterialTheme.shapes.medium
         ) {
             Text(
-                text = "Submit"
+                text = "Submit",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(vertical = 8.dp)
             )
         }
     }
