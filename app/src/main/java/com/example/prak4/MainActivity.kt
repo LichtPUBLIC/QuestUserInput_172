@@ -20,10 +20,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             Prak4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FormDataDiri(
+                    QuestUserInput(
                         modifier = Modifier.padding(innerPadding)
-                            .fillMaxSize() // Opsional: Agar Form mengisi seluruh layar
-                    ) // <--- Seharusnya ada kurung tutup di sini!
+                            .fillMaxSize()
+                    )
 
                 }
             }
